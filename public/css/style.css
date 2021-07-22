@@ -1,0 +1,326 @@
+body {
+  background: #eee;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+input,
+button {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+#login {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  box-shadow: 0 10px 10px #ff690011;
+  border-radius: 10px;
+}
+#login .input-control {
+  width: 100%;
+  margin: 20px 0;
+}
+#login .input-control label {
+  width: 36px;
+  padding: 10px;
+  float: left;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  border-color: #00000044;
+  height: 39px;
+  color: #00000044;
+  transition: border-color 0.4s, color 0.4s;
+}
+#login .input-control input {
+  width: calc(100% - 36px);
+  border: 1px solid #00000044;
+  padding: 10px;
+  float: right;
+  height: 39px;
+  transition: border-color 0.4s, color 0.4s;
+}
+#login .input-control input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #00000044;
+  opacity: 1;
+  /* Firefox */
+  transition: color 0.4s;
+}
+#login .input-control input:focus,
+#login .input-control input:not(:placeholder-shown) {
+  border-color: #ff6900;
+  color: #ff6900;
+}
+#login .input-control input:focus + label,
+#login .input-control input:not(:placeholder-shown) + label {
+  border-color: #ff6900;
+  color: #ff6900;
+}
+#login .input-control input:focus::placeholder,
+#login .input-control input:not(:placeholder-shown)::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ff690044;
+  opacity: 1;
+  /* Firefox */
+}
+#login .input-control input:focus:-ms-input-placeholder,
+#login .input-control input:not(:placeholder-shown):-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ff690044;
+}
+#login .input-control input:focus::-ms-input-placeholder,
+#login .input-control input:not(:placeholder-shown)::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ff690044;
+}
+#login .input-control input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #00000044;
+}
+#login .input-control input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #00000044;
+}
+#login .input-control:first-child {
+  margin-top: 0;
+}
+#login .input-control:last-child {
+  margin-bottom: 0;
+}
+#login .input-control:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+#login .submit-button {
+  border: 2px solid #ff6900;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ff6900;
+  width: 100%;
+  max-width: 200px;
+  margin: 40px auto 0;
+  cursor: pointer;
+  height: 34px;
+  overflow: hidden;
+  transition: color 0.4s, background-color 0.4s;
+}
+#login .submit-button .options {
+  position: relative;
+  top: 0;
+  transition: top 0.4s ease-in-out;
+}
+#login .submit-button p {
+  padding: 8px 0;
+}
+#login .submit-button p.loading i {
+  animation: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#login .submit-button.active {
+  background: #ff6900;
+  color: #fff;
+}
+main {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+main header,
+main section {
+  background: #fff;
+  padding: 20px;
+}
+main header {
+  margin-bottom: 20px;
+}
+main header h1 {
+  float: left;
+  padding: 8px 0;
+}
+main header a {
+  float: right;
+  background: transparent;
+  border: 2px solid #ff6900;
+  color: #ff6900;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: background-color 0.4s, color 0.4s;
+}
+main header a:hover {
+  background: #ff6900;
+  color: #fff;
+}
+main header:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+main section ul {
+  list-style: disc;
+}
+main section ul li {
+  margin: 10px 0;
+  padding: 5px;
+  background: #00000022;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+main section ul li:after {
+  display: block;
+  content: 'Clique para copiar';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background: #fff;
+  transform: translate(100%, 0);
+  transition: transform 0.4s;
+  border-left: 2px solid #ff6900;
+  color: #ff6900;
+}
+main section ul li:hover:after {
+  transform: translate(0, 0);
+}
+main .pagination {
+  text-align: center;
+}
+main .pagination > div {
+  display: inline-block;
+  padding: 5px;
+  min-width: 20px;
+  cursor: pointer;
+}
+main .pagination > div.active {
+  color: #b34a00;
+}
+main .pagination > div:hover {
+  color: #ff6900;
+}
+button {
+  background: transparent;
+  border: 2px solid #ff6900;
+  color: #ff6900;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: background-color 0.4s, color 0.4s;
+  float: right;
+}
+button:hover {
+  background: #ff6900;
+  color: #fff;
+}
+button.add-url {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  transform: translate(0, 100%);
+}
+.modal-add-url {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 20px;
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.4s;
+  height: 100vh;
+  box-shadow: 0 0 20px #00000044;
+}
+.modal-add-url h2 {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.modal-add-url > i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 21px;
+  color: red;
+  cursor: pointer;
+}
+.modal-add-url .input-control {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.modal-add-url .input-control input {
+  float: right;
+  width: calc(100% - 75px);
+  padding: 10px;
+  border: 1px solid #00000022;
+  height: 41px;
+}
+.modal-add-url .input-control input + label {
+  float: left;
+  width: 75px;
+  text-align: right;
+  padding: 10px;
+  height: 41px;
+}
+.modal-add-url .input-control .preview {
+  position: absolute;
+  bottom: -5px;
+  transform: translate(0, 100%);
+  left: 75px;
+  color: #00000066;
+  font-size: 14px;
+}
+.modal-add-url .input-control:first-of-type {
+  margin-bottom: 20px;
+}
+.modal-add-url .input-control:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.modal-add-url .save-url {
+  margin-top: 40px;
+}
+.modal-add-url .save-url[disabled] {
+  border-color: gray;
+  color: gray;
+  cursor: auto;
+}
+.modal-add-url .save-url[disabled]:hover {
+  background: transparent;
+  color: gray;
+}
+.modal-add-url.active {
+  display: block;
+  transform: translate(-100%, 0);
+}
+.clearfix {
+  clear: both;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
